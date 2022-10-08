@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\G3N8LE_ADT_2022_23_1.Logic\G3N8LE_ADT_2022_23_1.Logic.csproj" />
+    <ProjectReference Include="..\G3N8LE_ADT_2022_23_1.Models\G3N8LE_ADT_2022_23_1.Models.csproj" />
+    <ProjectReference Include="..\G3N8LE_ADT_2022_23_1.Repository\G3N8LE_ADT_2022_23_1.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
