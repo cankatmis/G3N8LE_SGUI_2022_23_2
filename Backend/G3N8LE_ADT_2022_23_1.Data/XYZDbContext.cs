@@ -28,7 +28,9 @@ namespace G3N8LE_ADT_2022_23_1.Data
             {
                 optionsBuilder.
                     UseLazyLoadingProxies().
-                    UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+                    UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|
+                    DataDirectory|\Database1.mdf;Integrated Security=True;
+                    MultipleActiveResultSets=True");
             }
         }
 
