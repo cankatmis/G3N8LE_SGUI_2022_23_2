@@ -64,9 +64,9 @@ namespace G3N8LE_ADT_2022_23_1.Logic
         // THREE NON-CRUD METHODS
         public IEnumerable<KeyValuePair<string, int>> TeacherEarnings()
         {
-            var TotalEarning = from artists in this._TeacherRepository.GetAll().ToList()
+            var TotalEarning = from teachers in this._TeacherRepository.GetAll().ToList()
                                join reservations in this._ReservationsRepository.GetAll().ToList()
-                               on artists.Id equals reservations.TeacherId
+                               on teachers.Id equals reservations.TeacherId
                                group reservations by reservations.TeacherId.Value into gr
                                select new KeyValuePair<string, int>
                                (_TeacherRepository.GetOne(gr.Key).Name, (gr.Count()) * _TeacherRepository.GetOne(gr.Key).Price);
