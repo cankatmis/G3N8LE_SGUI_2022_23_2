@@ -9,9 +9,9 @@ namespace G3N8LE_ADT_2022_23_1.Logic
 {
     public interface IClassesLogic
     {
-        Classes GetClasses(int id);
+        Classes GetClass(int id);
         IEnumerable<Classes> GetAllClasses();
-        void UpdateClassesCost(Classes clas);
+        void UpdateClassCost(Classes clas);
         public Classes AddNewClass(Classes clas);
         public void DeleteClass(int id);
     }
