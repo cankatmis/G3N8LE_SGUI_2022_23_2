@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace G3N8LE_ADT_2022_23_1.Logic
 {
-
-    public interface IReservationsClassesLogic
+    public interface IReservationsServicesLogic
     {
-        public ReservationsServices AddNewConnection(ReservationsServices reservserv);
-
+        public ReservationsServices AddNewConnection(ReservationsServices reservservice);
         public void DeleteConnection(int id);
         public ReservationsServices GetConnection(int id);
         public IEnumerable<ReservationsServices> GetAllConnections();

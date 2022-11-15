@@ -59,8 +59,6 @@ namespace G3N8LE_ADT_2022_23_1.Logic
         }
 
 
-
-
         // THREE NON-CRUD METHODS
         public IEnumerable<KeyValuePair<string, int>> TeacherEarnings()
         {
