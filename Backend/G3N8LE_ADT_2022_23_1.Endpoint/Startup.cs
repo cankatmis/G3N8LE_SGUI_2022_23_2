@@ -1,4 +1,5 @@
 using G3N8LE_ADT_2022_23_1.Data;
+using G3N8LE_ADT_2022_23_1.Endpoint.Services;
 using G3N8LE_ADT_2022_23_1.Logic;
 using G3N8LE_ADT_2022_23_1.Repository;
 using Microsoft.AspNetCore.Builder;
