@@ -10,7 +10,7 @@ namespace G3N8LE_ADT_2022_23_1.Repository
 {
     public class ReservationsServicesRepository : Repository<ReservationsServices>, IReservationsServicesRepository
     {
-        public ReservationsServicesRepository(XYZDbContext DbContext) : base(DbContext) { }
+        public ReservationsServicesRepository(SchoolDbContext DbContext) : base(DbContext) { }
         public override ReservationsServices GetOne(int id)
         {
             return this.GetAll().SingleOrDefault(connection => connection.Id == id);

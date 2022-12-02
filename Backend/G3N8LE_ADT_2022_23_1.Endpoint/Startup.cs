@@ -32,7 +32,7 @@ namespace G3N8LE_ADT_2022_23_1.Endpoint
             services.AddTransient<IReservationsRepository, ReservationsRepository>();
             services.AddTransient<IReservationsServicesRepository, ReservationsServicesRepository>();
             services.AddTransient<IClassesRepository, ClassesRepository>();
-            services.AddTransient<XYZDbContext, XYZDbContext>();
+            services.AddTransient<SchoolDbContext, SchoolDbContext>();
             services.AddSignalR();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

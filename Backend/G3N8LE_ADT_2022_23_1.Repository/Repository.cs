@@ -6,8 +6,8 @@ namespace G3N8LE_ADT_2022_23_1.Repository
 {
     public abstract class Repository<T> : IRepository<T> where T : class
     {
-        protected XYZDbContext context;
-        protected Repository(XYZDbContext ctx)
+        protected SchoolDbContext context;
+        protected Repository(SchoolDbContext ctx)
         {
             this.context = ctx;
         }

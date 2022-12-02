@@ -8,14 +8,14 @@ using G3N8LE_ADT_2022_23_1.Models;
 
 namespace G3N8LE_ADT_2022_23_1.Data
 {
-    public class XYZDbContext : DbContext
+    public class SchoolDbContext : DbContext
     {
-        public XYZDbContext()
+        public SchoolDbContext()
         {
             this.Database.EnsureCreated();
         }
 
-        public XYZDbContext(DbContextOptions<XYZDbContext> options) : base(options) { }
+        public SchoolDbContext(DbContextOptions<SchoolDbContext> options) : base(options) { }
         public virtual DbSet<Students> Students { get; set; }
         public virtual DbSet<Teachers> Teachers { get; set; }
         public virtual DbSet<Classes> Classes { get; set; }

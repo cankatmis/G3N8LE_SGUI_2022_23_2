@@ -10,7 +10,7 @@ namespace G3N8LE_ADT_2022_23_1.Repository
 {
     public class ReservationsRepository : Repository<Reservations>, IReservationsRepository
     {
-        public ReservationsRepository(XYZDbContext DbContext) : base(DbContext) { }
+        public ReservationsRepository(SchoolDbContext DbContext) : base(DbContext) { }
         public void UpdateDate(int id, DateTime newDate)
         {
             var reservation = this.GetOne(id);

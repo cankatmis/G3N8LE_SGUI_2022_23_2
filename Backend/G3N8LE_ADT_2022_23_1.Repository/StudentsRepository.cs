@@ -10,7 +10,7 @@ namespace G3N8LE_ADT_2022_23_1.Repository
 {
     public class StudentsRepository : Repository<Students>, IStudentsRepository
     {
-        public StudentsRepository(XYZDbContext DbContext) : base(DbContext) { }
+        public StudentsRepository(SchoolDbContext DbContext) : base(DbContext) { }
         public override Students GetOne(int id)
         {
             return this.GetAll().SingleOrDefault(student => student.Id == id);
