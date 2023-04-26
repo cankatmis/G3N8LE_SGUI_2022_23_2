@@ -45,7 +45,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             Classes = new ObservableCollection<Classes>();
 
             _apiClient
-                .GetAsync<List<Classes>>("http://localhost:37793/classes")
+                .GetAsync<List<Classes>>("http://localhost:60617/classes")
                 .ContinueWith((classes) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -72,7 +72,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             };
 
             _apiClient
-                .PostAsync(n, "http://localhost:37793/classes")
+                .PostAsync(n, "http://localhost:60617/classes")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -85,7 +85,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void EditClass()
         {
             _apiClient
-                .PutAsync(SelectedClass, "http://localhost:37793/classes")
+                .PutAsync(SelectedClass, "http://localhost:60617/classes")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -100,7 +100,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void DeleteClass()
         {
             _apiClient
-                .DeleteAsync(SelectedClass.Id, "http://localhost:37793/classes")
+                .DeleteAsync(SelectedClass.Id, "http://localhost:60617/classes")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>

@@ -56,7 +56,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
 
 
             _apiClient
-                .GetAsync<List<Teachers>>("http://localhost:37793/teachers")
+                .GetAsync<List<Teachers>>("http://localhost:60617/teachers")
                 .ContinueWith((teachers) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -69,7 +69,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
                 });
 
             _apiClient
-               .GetAsync<List<KeyValuePair<string, int>>>("http://localhost:37793/Noncrudteacher/TeachersEarnings")
+               .GetAsync<List<KeyValuePair<string, int>>>("http://localhost:60617/Noncrudteacher/TeachersEarnings")
                .ContinueWith((teachersEar) =>
                {
                    Application.Current.Dispatcher.Invoke(() =>
@@ -81,7 +81,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
                    });
                });
             _apiClient
-               .GetAsync<List<KeyValuePair<string, int>>>("http://localhost:37793/Noncrudteacher/Mostpaidteacher")
+               .GetAsync<List<KeyValuePair<string, int>>>("http://localhost:60617/Noncrudteacher/Mostpaidteacher")
                .ContinueWith((MostTeach) =>
                {
                    Application.Current.Dispatcher.Invoke(() =>
@@ -93,7 +93,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
                    });
                });
             _apiClient
-              .GetAsync<List<KeyValuePair<string, int>>>("http://localhost:37793/Noncrudteacher/Lesspaidteacher")
+              .GetAsync<List<KeyValuePair<string, int>>>("http://localhost:60617/Noncrudteacher/Lesspaidteacher")
               .ContinueWith((MostTeach) =>
               {
                   Application.Current.Dispatcher.Invoke(() =>
@@ -130,7 +130,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             };
 
             _apiClient
-                .PostAsync(n, "http://localhost:37793/teachers")
+                .PostAsync(n, "http://localhost:60617/teachers")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -143,7 +143,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void EditTeacher()
         {
             _apiClient
-                .PutAsync(SelectedTeacher, "http://localhost:37793/teachers")
+                .PutAsync(SelectedTeacher, "http://localhost:60617/teachers")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -158,7 +158,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void DeleteTeacher()
         {
             _apiClient
-                .DeleteAsync(SelectedTeacher.Id, "http://localhost:37793/teachers")
+                .DeleteAsync(SelectedTeacher.Id, "http://localhost:60617/teachers")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>

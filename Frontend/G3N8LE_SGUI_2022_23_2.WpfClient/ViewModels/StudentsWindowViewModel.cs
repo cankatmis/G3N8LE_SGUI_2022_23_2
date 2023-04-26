@@ -51,7 +51,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             WorstStudent = new List<KeyValuePair<int, int>>();
 
             _apiClient
-                .GetAsync<List<Students>>("http://localhost:37793/students")
+                .GetAsync<List<Students>>("http://localhost:60617/students")
                 .ContinueWith((students) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -63,7 +63,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
                     });
                 });
             _apiClient
-               .GetAsync<List<KeyValuePair<int, int>>>("http://localhost:37793/Noncrudfan/BestStudents")
+               .GetAsync<List<KeyValuePair<int, int>>>("http://localhost:60617/Noncrudfan/BestStudents")
                .ContinueWith((Beststudent) =>
                {
                    Application.Current.Dispatcher.Invoke(() =>
@@ -75,7 +75,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
                    });
                });
             _apiClient
-              .GetAsync<List<KeyValuePair<int, int>>>("http://localhost:37793/Noncrudfan/WorstStudents")
+              .GetAsync<List<KeyValuePair<int, int>>>("http://localhost:60617/Noncrudfan/WorstStudents")
               .ContinueWith((Worststudent) =>
               {
                   Application.Current.Dispatcher.Invoke(() =>
@@ -108,7 +108,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             };
 
             _apiClient
-                .PostAsync(n, "http://localhost:37793/students")
+                .PostAsync(n, "http://localhost:60617/students")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -121,7 +121,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void EditStudent()
         {
             _apiClient
-                .PutAsync(SelectedStudent, "http://localhost:37793/students")
+                .PutAsync(SelectedStudent, "http://localhost:60617/students")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -136,7 +136,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void DeleteStudent()
         {
             _apiClient
-                .DeleteAsync(SelectedStudent.Id, "http://localhost:37793/students")
+                .DeleteAsync(SelectedStudent.Id, "http://localhost:60617/students")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>

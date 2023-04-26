@@ -45,7 +45,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             Reservations = new ObservableCollection<Reservations>();
 
             _apiClient
-                .GetAsync<List<Reservations>>("http://localhost:37793/reservations")
+                .GetAsync<List<Reservations>>("http://localhost:60617/reservations")
                 .ContinueWith((reservations) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -74,7 +74,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
             };
 
             _apiClient
-                .PostAsync(n, "http://localhost:37793/reservations")
+                .PostAsync(n, "http://localhost:60617/reservations")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -86,7 +86,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void EditReservation()
         {
             _apiClient
-                .PutAsync(SelectedReservation, "http://localhost:37793/reservations")
+                .PutAsync(SelectedReservation, "http://localhost:60617/reservations")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
@@ -101,7 +101,7 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         private void DeleteReservation()
         {
             _apiClient
-                .DeleteAsync(SelectedReservation.Id, "http://localhost:37793/reservations")
+                .DeleteAsync(SelectedReservation.Id, "http://localhost:60617/reservations")
                 .ContinueWith((task) =>
                 {
                     Application.Current.Dispatcher.Invoke(() =>
