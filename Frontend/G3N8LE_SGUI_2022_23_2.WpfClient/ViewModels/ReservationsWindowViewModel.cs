@@ -100,15 +100,23 @@ namespace G3N8LE_SGUI_2022_23_2.WpfClient.ViewModels
         }
         private void DeleteReservation()
         {
-            _apiClient
-                .DeleteAsync(SelectedReservation.Id, "http://localhost:60617/reservations")
-                .ContinueWith((task) =>
-                {
-                    Application.Current.Dispatcher.Invoke(() =>
+            if (SelectedReservation != null)
+            {
+                _apiClient
+                    .DeleteAsync(SelectedReservation.Id, "http://localhost:60617/reservations")
+                    .ContinueWith((task) =>
                     {
-                        Reservations.Remove(SelectedReservation);
+                        Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            Reservations.Remove(SelectedReservation);
+                        });
                     });
-                });
+            }
+            else
+            {
+                MessageBox.Show("No reservation selected.");
+            }
         }
+
     }
 }

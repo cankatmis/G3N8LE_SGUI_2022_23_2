@@ -45,7 +45,7 @@ namespace G3N8LE_ADT_2022_23_1.Endpoint
                 .AllowCredentials()
                 .AllowAnyMethod()
                 .AllowAnyHeader()
-                .WithOrigins("http://localhost:65410"));
+                .WithOrigins("http://localhost:25446"));
 
             app.UseRouting();
             app.UseAuthorization();

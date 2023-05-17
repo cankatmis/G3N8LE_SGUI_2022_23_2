@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reservations UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Teachers</a>
+        <a href="Students.html">Students</a>
+        <a class="active" href="Reservations.html">Reservations</a>
+        <a href="Classes.html">Classes</a>
+        <a href="NonCrud.html">non-CRUD Actions</a>
+
+    </div>
+
+    <h1>Reservations Catalog</h1>
+
+
+    <div id="formdiv">
+        <label>Student Id</label>
+        <input type="number" id="reservationstudentid" />
+        <label>Teacher Id</label>
+        <input type="number" id="reservationteacherid" />
+        <label>Date Time</label>
+        <input type="datetime" id="reservationdate" />
+
+        <button type="button" onclick="create()">Add Reservation</button>
+    </div>
+    <div id="updateformdiv">
+
+        <label>Date Time</label>
+        <input type="datetime" id="reservationdateToUpdate" />
+        <button type="button" onclick="update()">Update Reservation</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student ID</th>
+                <th>Teacher ID</th>
+                <th>Date Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="Reservations.js"></script>
+</body>
+</html>

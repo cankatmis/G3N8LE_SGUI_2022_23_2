@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "G3N8LE_ADT_2022_23_1.Client": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58796;http://localhost:58797"
+    }
+  }
+}

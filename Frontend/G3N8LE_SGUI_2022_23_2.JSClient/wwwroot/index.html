@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Teachers UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Teachers</a>
+        <a href="Students.html">Students</a>
+        <a href="Reservations.html">Reservations</a>
+        <a href="Classes.html">Classes</a>
+        <a href="NonCrud.html">non-CRUD Actions</a>
+
+
+</div>
+
+    <h1>Teachers Catalog</h1>
+
+
+    <div id="formdiv">
+        <label>Teacher Name</label>
+        <input type="text" id="teachername" />
+        <label>Teacher Cost</label>
+        <input type="number" id="teachercost" />
+        <label>Teacher Category</label>
+        <input type="text" id="teachercategory" />
+        <button type="button" onclick="create()">Add Teacher</button>
+    </div>
+    <div id="updateformdiv">
+
+        <label>Teacher Cost</label>
+        <input type="number" id="teachercostToUpdate" />
+
+        <button type="button" onclick="update()">Update Teacher Cost</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

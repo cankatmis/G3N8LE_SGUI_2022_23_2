@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Classes UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Teachers</a>
+        <a href="Students.html">Students</a>
+        <a href="Reservations.html">Reservations</a>
+        <a class="active" href="Classes.html">Classes</a>
+        <a href="NonCrud.html">non-CRUD Actions</a>
+
+    </div>
+
+    <h1>Classes Catalog</h1>
+
+
+    <div id="formdiv">
+        <label>Class Name</label>
+        <input type="text" id="classname" />
+        <label>Class Grading</label>
+        <input type="range" id="classgrading" min="1" max="10">
+        <!--<input type="number" id="classgrading" />-->
+        <label>Class Cost</label>
+        <input type="number" id="classcost" />
+
+        <button type="button" onclick="create()">Add Class</button>
+    </div>
+    <div id="updateformdiv">
+
+        <label>Class Cost</label>
+        <input type="number" id="classcostToUpdate" />
+        <button type="button" onclick="update()">Update Class</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Grading</th>
+                <th>Cost</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="Classes.js"></script>
+</body>
+</html>

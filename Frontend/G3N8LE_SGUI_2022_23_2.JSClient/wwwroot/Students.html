@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Students UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Teachers</a>
+        <a class="active" href="Students.html">Students</a>
+        <a href="Reservations.html">Reservations</a>
+        <a href="Classes.html">Classes</a>
+        <a href="NonCrud.html">non-CRUD Actions</a>
+    </div>
+
+    <h1>Students Catalog</h1>
+
+
+
+    <div id="formdiv">
+        <label>Student Name</label>
+        <input type="text" id="studentname" />
+        <label>Student City</label>
+        <input type="text" id="studentcity" />
+        <label>Student Email</label>
+        <input type="text" id="studentemail" />
+
+        <button type="button" onclick="create()">Add Student</button>
+    </div>
+    <div id="updateformdiv">
+
+        <label>Student City</label>
+        <input type="text" id="studentcityToUpdate" />
+        <button type="button" onclick="update()">Update Student</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="Students.js"></script>
+</body>
+</html>
